@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tempurature</title>
+</head>
+<body>
+    <script>
+        function Tempurature(c) {
+            this.c = c;
+            
+            this.getF = function () {
+                return (c*1.8)+32;
+            };
+
+            this.getK = function () {
+                return c+273.15;
+            }
+        }
+
+        let TempC = new Tempurature(25);
+        let TempF = TempC.getF();
+        let TempK = TempC.getK();
+
+        document.write(TempC.c + "&deg;C -- > " + TempF + "&deg;F<br>");
+        document.write(TempC.c + "&deg;C -- > " + TempK + "&deg;K<br>");
+
+    </script>
+</body>
+</html>
